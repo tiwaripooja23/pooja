@@ -1,0 +1,239 @@
+{
+  
+    "path": [
+        {
+            "/": {
+                "fri": "page/leadlist",
+                "params": []
+            },
+            "/lead/:id": {
+                "fri": "page/leadview",
+                "params": ["id"]
+            },
+            "/debt/:id": {
+                "fri": "page/debtview",
+                "params": ["id"]
+            },
+            "/debt": {
+                "fri": "page/debtlist",
+                "params": []
+            }
+
+        }
+    ],
+
+
+  "ticketData": [
+    {
+      "cardTitle": "Tickets",
+      "actionButton": "+ Add",
+      "bottomLink": "View All",
+      "id": "4002403",
+      "headerText": "Settlement Manager Approval",
+      "subText": "Pending 3 days",
+      "image": "/svg/form2.svg",
+      "badgeName": "ND",
+      "tags": [
+        {
+          "name": "Client 24532532532"
+        },
+        {
+          "name": "Debt 187594"
+        }
+      ]
+    },
+    {
+      "id": "4002402",
+      "badgeName": "ND",
+      "headerText": "Issue Refund",
+      "subText": "Completed an hour ago",
+      "image": "/svg/form3.svg",
+      "tags": [
+        {
+          "name": "Client 24532532532"
+        },
+        {
+          "name": "Payment 187594"
+        }
+      ]
+    },
+    {
+      "id": "4002401",
+      "badgeName": "ND",
+      "headerText": "NSF Resolution",
+      "subText": "10/10 Pending",
+      "image": "/svg/form1.svg"
+    },
+    {
+      "id": "4002401",
+      "headerText": "New Client Underwriting",
+      "subText": "6/10 Pending",
+      "badgeName": "ND",
+      "image": "/svg/form3.svg"
+    },
+    {
+      "id": "4002401",
+      "badgeName": "ND",
+      "headerText": "Change Deposit Plan",
+      "subText": "12/12 Completed 10 days ago",
+      "image": "/svg/form2.svg"
+    }
+  ],
+  "appointmentData": [
+    {
+      "cardTitle": "Appointments",
+      "actionButton": "+ Add",
+      "id": "40775",
+      "headerText": "December 12 2012 at 4:00 PM EST",
+      "subText": "Client Nurture Call",
+      "badgeName": "ND",
+      "leftBorder": true
+    }
+  ],
+  "tagData": [
+    {
+      "actionButton": "+ Add",
+      "id": "4002",
+      "cardTitle": "Tags",
+      "tags": [
+        {
+          "name": "Urgent Phil"
+        }
+      ]
+    }
+  ],
+  "ownershipHistoryData": [
+    {
+      "cardTitle": "OwnerShip History",
+      "id": "4002403",
+      "headerText": "GreenBox Inc.",
+      "subText": "12/12/2012 by Jenny pavlola",
+      "image": "/svg/form1.svg"
+    },
+    {
+      "id": "75752",
+      "headerText": "Iron Teapot Inc.",
+      "subText": "06/06/2006 by Jenny pavlola",
+      "image": "/svg/form2.svg"
+    }
+  ],
+  "formListData": [
+    {
+      "cardTitle": "Forms",
+      "actionButton": "+ Add",
+      "bottomLink": "View All",
+      "id": "1",
+      "headerText": "Initial Outreach",
+      "subText": "Completed . Nadia Chen. an hour ago",
+      "image": "/svg/form2.svg"
+    },
+    {
+      "id": "2",
+      "headerText": "Enrollment Questionnaire",
+      "subText": "Unfinished . Alex young . Yesterday",
+      "image": "/svg/form3.svg"
+    },
+    {
+      "id": "3",
+      "headerText": "Financial intake",
+      "subText": "Not started",
+      "image": "/svg/form1.svg"
+    }
+  ],
+  "tabitems": [
+    {
+      "title": "All Leads",
+      "url": "url1"
+    },
+    {
+      "title": "Debt Leads",
+      "url": "url1"
+    },
+    {
+      "title": "Lead Sources",
+      "url": "url1"
+    }
+  ],
+  "logomenuitems": [
+    {
+      "title": "Profile",
+      "url": "menu1"
+    },
+    {
+      "title": "Change Password",
+      "url": "menu2"
+    },
+    {
+      "title": "Logout",
+      "url": "menu3"
+    }
+  ],
+  "leftmenuitems": [
+    {
+      "title": "Work",
+      "url": "menu1"
+    },
+    {
+      "title": "Record",
+      "url": "",
+      "children": [
+        {
+          "title": "Leads",
+          "url": "menu11"
+        },
+        {
+          "title": "Client",
+          "url": "menu12"
+        },
+        {
+          "title": "Creditors",
+          "url": "menu13"
+        }
+      ]
+    },
+    {
+      "title": "Integration",
+      "url": "",
+      "children": [
+        {
+          "title": "Integration1",
+          "url": "menu21"
+        },
+        {
+          "title": "Integration2",
+          "url": "menu22"
+        },
+        {
+          "title": "Integration3",
+          "url": "menu23"
+        }
+      ]
+    }
+  ],
+  "toolbar": {
+    "components": [
+      {
+        "id": "fri://uicomponent/button?id=clientcustombutton1",
+        "config": {
+          "title": "Custom",
+          "startIcon": "user"
+        }
+      },
+      {
+        "id": "fri://uicomponent/button?id=clientcustombutton2",
+        "config": {
+          "title": "Edit",
+          "startIcon": "edit"
+        }
+      },
+      {
+        "id": "fri://uicomponent/button?id=clientcustombutton3",
+        "startIcon": "add",
+        "config": {
+          "title": "Add"
+          
+        }
+      }
+    ]
+  }
+}

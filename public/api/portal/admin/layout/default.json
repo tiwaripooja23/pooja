@@ -1,0 +1,107 @@
+{
+  "name": "default",
+  "components": [
+    {
+      "id": "fri::uicomponent::grid?id=menugrid",
+      "config": {
+        "item": "true",
+        "className": "fx-menu"
+      },
+      "components": [
+        {
+          "id": "fri::uicomponent::div?id=menudiv",
+          "config": {
+            "className": "fx-menu-sticky"
+          },
+          "components": [
+            {
+              "id": "fri::uicomponent::inlinemenu?id=inlinemenutop",
+              "config": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fri::uicomponent::grid?id=details",
+      "config": {
+        "item": "true",
+        "xs": "true"
+      },
+      "components": [
+        {
+          "id": "fri::uicomponent::grid?id=details-header",
+          "config": {
+            "direction": "row",
+            "xs": "12"
+          },
+          "components": [
+            {
+              "id": "fri::uicomponent::grid?id=breadcrumbgrid",
+              "config": {
+                "item": "true",
+                "xs": "4"
+              },
+              "components": [
+                {
+                  "id": "fri::uicomponent::breadcrumbs?id=breadcrumb"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolbar": {
+            "id": "fri::uicomponent::toolbar?id=toptoolbar",
+            "config": {
+              "className": "fx-toolbar"
+            }
+          }
+        },
+        {
+          "id": "fri::uicomponent::placeholder?id=placeholder",
+          "config": {
+            "className": "fx-placeholder"
+          },
+          "components": [
+            {
+              "id": "fri::uicomponent::table?id=tableregion",
+              "config": {
+                "className": "fx-left-card"
+              },
+              "components": [
+                {
+                  "id": "fri::uicomponent::tr?id=trregion",
+                  "components": [
+                    {
+                      "id": "fri::uicomponent::td?id=tdregionleft",
+                      "config": {
+                        "className": "fx-left-card"
+                      },
+                      "components": [
+                        {
+                          "id": "fri::uicomponent::placeholder?id=leftarea"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "fri::uicomponent::td?id=tdregionright",
+                      "config": {
+                        "className": "fx-right-card"
+                      },
+                      "components": [
+                        {
+                          "id": "fri::uicomponent::placeholder?id=rightarea"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+ {  
+    "page": 
+        {
+            "layout":"default",
+            "menu": {
+                  "logoMenu":  [{ "title": "Profile", "url": "menu1" }, 
+                                { "title": "Change Password", "url": "menu2" },
+                                { "title": "Logout", "url": "menu3" }] ,
+                  "menuItems": [{ "title": "menu1", "url": "menu1" }, 
+                                { "title": "menu2", "url": "menu2" }]
+            },
+            "heading":"Leads",
+            "tabs":[
+                { "title": "All Leads","url":"url1" },
+                { "title": "Debt Leads","url":"url1" },
+                { "title": "Lead Sources","url":"url1" }
+              ]
+        }
+    
+}

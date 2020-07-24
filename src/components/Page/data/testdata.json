@@ -1,0 +1,450 @@
+{
+    "layout": {
+        "name": "default",
+        "children": [
+            {
+                "component": "fri://portal/component/grid",
+                "id": "menugrid",
+                "config": {
+                    "item": "true",
+                    "style": "fx-menu"
+                },
+                "children": [
+                    {
+                        "component": "fri://portal/component/div",
+                        "id": "menudiv",
+                        "config": {
+                            "style": "fx-menu-sticky"
+                        },
+                        "children": [
+                            {
+                                "component": "fri://portal/component/button",
+                                "id": "toplogobutton",
+                                "config": {}
+                            },
+                            {
+                                "component": "fri://portal/component/popupmenu",
+                                "id": "toppopupmenu",
+                                "config": {}
+                            },
+                            {
+                                "component": "fri://portal/component/inlinemenu",
+                                "id": "inlinemenutop",
+                                "config": {}
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "component": "fri://portal/component/grid",
+                "id": "details",
+                "config": {
+                    "item": "true",
+                    "xs": "true"
+                },
+                "children": [
+                    {
+                        "component": "fri://portal/component/grid",
+                        "id": "details-header",
+                        "config": {
+                            "direction": "row",
+                            "xs": "12"
+                        },
+                        "children": [
+                            {
+                                "component": "fri://portal/component/grid",
+                                "id": "breadcrumbgrid",
+                                "config": {
+                                    "item": "true",
+                                    "xs": "4"
+                                },
+                                "children": [
+                                    {
+                                        "Component": "fri://portal/component/breadcrumbs",
+                                        "id": "breadcrumb"
+                                    }
+                                ]
+                            },
+                            {
+                                "component": "fri://portal/component/grid",
+                                "id": "lastmodifiedgrid",
+                                "config": {
+                                    "justify": "flex-end",
+                                    "alignItems": "center",
+                                    "item": "true",
+                                    "xs": "true",
+                                    "className": "btn-actions"
+                                },
+                                "children": [
+                                    {
+                                        "component": "fri://portal/component/logininfo",
+                                        "id": "logininfo"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "component": "fri://portal/component/tab",
+                        "id": "toptab",
+                        "config": {
+                            "className": "fx-tab"
+                        }
+                    },
+                    {
+                        "component": "fri://portal/component/buttonbar",
+                        "id": "fxgap",
+                        "config": {
+                            "direction": "row",
+                            "item": "true",
+                            "xs": "12",
+                            "className": "fx-gap"
+                        },
+                        "children": [
+                            {
+                                "component": "fri://portal/component/toolbar",
+                                "id": "toolbartop",
+                                "config": {}
+                            }
+                        ]
+                    },
+                    {
+                        "component": "fri://portal/component/placeholder",
+                        "id": "placeholder",
+                        "config": {
+                            "className": "fx-placeholder"
+                        },
+                        "children": [
+                            {
+                                "component": "fri://portal/component/table",
+                                "id": "tableregion",
+                                "config": {
+                                    "className": "fx-left-card"
+                                },
+                                "children": [
+                                    {
+                                        "component": "fri://portal/component/tr",
+                                        "id": "trregion",
+                                        "children": [
+                                            {
+                                                "component": "fri://portal/component/td",
+                                                "id": "tdregionleft",
+                                                "config": {
+                                                    "className": "fx-left-card"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "component": "fri://portal/component/placeholder",
+                                                        "id": "leftarea"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "component": "fri://portal/component/td",
+                                                "id": "tdregionright",
+                                                "config": {
+                                                    "className": "fx-right-card"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "component": "fri://portal/component/placeholder",
+                                                        "id": "rightarea"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "page": {
+        "layout": {
+            "name": "default",
+            "component": {
+                "fri://portal/component/popupmenu?id=toppopupmenu": {
+                    "source": {
+                        "type": "0",
+                        "api": {}
+                    },
+                    "data": ""
+                },
+                "fri://portal/component/inlinemenu?id=inlinemenutop": {
+                    "source": {
+                        "type": "0",
+                        "api": {}
+                    },
+                    "data": ""
+                },
+                "fri://portal/component/tab?id=toptab": {
+                    "source": {
+                        "type": "0",
+                        "api": {}
+                    },
+                    "data": ""
+                },
+                "fri://portal/component/breadcrumbs?id=breadcrumb": {
+                    "source": {
+                        "type": "0",
+                        "api": {}
+                    },
+                    "data": ""
+                }
+            }
+        },
+        "placeholder": {
+            "leftarea": [{
+                    "component": "fri: //portal/component/infocard",
+                    "id": "clientcard",
+                    "config": {
+                        "title": "Client Information",
+                        "mode": "view",
+                        "entity": "fri://entity/Client"
+                    },
+                    "init": {
+                        "name": "CLIENT_ID_SET"
+                    },
+                    "toolbar": {
+                        "component": {
+                            "fri: //portal/component/button?id=btnadd": {
+                                "config": {
+                                    "enabled": false
+                                }
+                            },
+                            "fri: //portal/component/button?id=btnEdit": {}
+                        },
+                        "children": [{
+                            "component": "fri://portal/component/button",
+                            "id": "clientcustombutton",
+                            "config": {
+                                "title": "Custom",
+                                "icon": "Pencil"
+                            },
+                            "events": {
+                                "onClick": {
+                                    "id": "fri://uiaction/saga/api_call",
+                                    "params": {},
+                                    "onSuccess": {
+                                        "id": "fri://uiaction/saga/api_call"
+                                    },
+                                    "onError": {
+                                        "id": "fri://uiaction/ui/page_reload",
+                                        "params": {
+                                            "text": "Something went wrong"
+                                        }
+                                    }
+                                }
+                            }
+                        }]
+                    },
+                    "source": {
+                        "type": 0,
+                        "api": "/client/list"
+                    },
+                    "data": ""
+                },
+                {
+                    "component": "fri: //portal/component/datagridcard",
+                    "id": "debtcard",
+                    "config": {
+                        "title": "Debts",
+                        "mode": "view",
+                        "entity": "fri://entity/Debts"
+                    },
+                    "init": {
+                        "name": "DEBT_ID_SET"
+                    },
+                    "toolbar": [{
+                            "component": "Button",
+                            "id": "DebtAddButton",
+                            "config": {
+                                "title": "Add",
+                                "starticon": "Plus"
+                            }
+                        },
+                        {
+                            "component": "Button",
+                            "id": "DebtOptionButton",
+                            "config": {
+                                "title": "...",
+                                "endicon": "Arrow"
+                            }
+                        }
+                    ],
+                    "source": {
+                        "type": 0,
+                        "api": "/debt/list"
+                    },
+                    "data": ""
+                },
+                {
+                    "component": "fri: //portal/component/calendarcard",
+                    "id": "balancecard",
+                    "config": {
+                        "title": "Balance Calendar",
+                        "mode": "view",
+                        "entity": "fri://entity/balance"
+                    },
+                    "init": {
+                        "name": "DEBT_ID_SET"
+                    },
+                    "toolbar": {},
+                    "source": {
+                        "type": 0,
+                        "api": "/balance/list"
+                    },
+                    "data": ""
+                },
+                {
+                    "component": "fri: //portal/component/datagridcard",
+                    "id": "ExternalAccountCard",
+                    "config": {
+                        "title": "External Accounts",
+                        "mode": "view",
+                        "entity": "fri://entity/external_accounts"
+                    },
+                    "init": {
+                        "name": "DEBT_ID_SET"
+                    },
+                    "toolbar": [{
+                        "component": "fri: //portal/component/button",
+                        "id": "ExternalAccountAddButton",
+                        "config": {
+                            "title": "Add",
+                            "starticon": "Plus"
+                        }
+                    }],
+                    "source": {
+                        "type": 0,
+                        "api": "/external_accounts/list"
+                    },
+                    "data": ""
+                }
+            ],
+            "rightarea": [{
+                    "component": "fri: //portal/component/listItemcard",
+                    "id": "AppointmentsCard",
+                    "config": {
+                        "title": "Appointments",
+                        "mode": "view",
+                        "entity": "fri://entity/appointments"
+                    },
+                    "init": {
+                        "name": "DEBT_ID_SET"
+                    },
+                    "toolbar": [{
+                        "component": "fri: //portal/component/button",
+                        "id": "AppointmentsAddButton",
+                        "config": {
+                            "title": "Add",
+                            "starticon": "Plus"
+                        }
+                    }],
+                    "source": {
+                        "type": 0,
+                        "api": "/appointments/list"
+                    },
+                    "data": ""
+                },
+                {
+                    "component": "fri: //portal/component/listItemcard",
+                    "id": "ownershiphistorycard",
+                    "config": {
+                        "title": "Ownership History",
+                        "mode": "view",
+                        "entity": "fri://entity/Ownership_history"
+                    },
+                    "init": {
+                        "name": "DEBT_ID_SET"
+                    },
+                    "toolbar": [],
+                    "source": {
+                        "type": 0,
+                        "api": "/Ownership_history/list"
+                    },
+                    "data": ""
+                },
+                {
+                    "component": "fri: //portal/component/listitemcard",
+                    "id": "ticketscard",
+                    "config": {
+                        "title": "Tickets",
+                        "mode": "view",
+                        "entity": "fri://entity/tickets"
+                    },
+                    "init": {
+                        "name": "DEBT_ID_SET"
+                    },
+                    "toolbar": [{
+                        "component": "fri: //portal/component//button",
+                        "id": "ticketsaddbutton",
+                        "config": {
+                            "title": "Add",
+                            "starticon": "Plus"
+                        }
+                    }],
+                    "source": {
+                        "type": 0,
+                        "api": "/tickets/list"
+                    },
+                    "data": ""
+                },
+                {
+                    "component": "fri: //portal/component/lisiItemcard",
+                    "id": "tagscard",
+                    "config": {
+                        "title": "Tags",
+                        "mode": "view",
+                        "entity": "fri://entity/tags"
+                    },
+                    "init": {
+                        "name": "DEBT_ID_SET"
+                    },
+                    "toolbar": [{
+                        "component": "fri: //portal/component/button",
+                        "id": "tagsaddbutton",
+                        "config": {
+                            "title": "Add",
+                            "starticon": "Plus"
+                        }
+                    }],
+                    "source": {
+                        "type": 0,
+                        "api": "/tags/list"
+                    },
+                    "data": ""
+                },
+                {
+                    "component": "fri: //portal/component/listitemcard",
+                    "id": "formscard",
+                    "config": {
+                        "title": "Forms",
+                        "mode": "view",
+                        "entity": "fri://entity/forms"
+                    },
+                    "init": {
+                        "name": "DEBT_ID_SET"
+                    },
+                    "toolbar": [{
+                        "component": "fri: //portal/component/button",
+                        "id": "formsaddbutton",
+                        "config": {
+                            "title": "Add",
+                            "starticon": "Plus"
+                        }
+                    }],
+                    "source": {
+                        "type": 0,
+                        "api": "/forms/list"
+                    },
+                    "data": ""
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,133 @@
+{
+  "layout": {
+    "name": "default",
+    "component": {
+      "fri::uicomponent::inlinemenu?id=inlinemenutop": {
+        "source": {
+          "type": "0",
+          "api": {}
+        },
+        "data": ""
+      },
+      "fri::uicomponent::breadcrumbs?id=breadcrumb": {
+        "source": {
+          "type": "0",
+          "api": {}
+        },
+        "data": ""
+      }
+    }
+  },
+  "placeholder": {
+    "leftarea": [
+      {
+        "id": "fri::uicomponent::infocard?id=clientcard",
+        "paramsparams": {
+          "title": "Client Information",
+          "mode": "view",
+          "entity": "fri::entity::Client"
+        },
+        "init": {
+          "name": "CLIENT_ID_SET"
+        },
+        "toolbar": {
+          "component": {
+            "fri::uicomponent::button?id=btnadd": {
+              "config": {
+                "enabled": false
+              }
+            },
+            "fri::uicomponent::button?id=btnEdit": {}
+          },
+          "components": [
+            {
+              "id": "fri::uicomponent::typography?id=topheading",
+              "config": {
+                "title": "Fx Toolbar",
+                "variant": "h3"
+              }
+            },
+            {
+              "id": "fri::uicomponent::button?id=clientcustombutton1",
+              "config": {
+                "title": "Custom",
+                "startIcon": "user"
+              },
+              "events": {
+                "onClick": {
+                  "function": "GETUSER_INFO",
+                  "target": "fri::uicomponent::typography?id=topheading"
+                }
+              }
+            },
+            {
+              "id": "fri::uicomponent::button?id=clientcustombutton2",
+              "config": {
+                "title": "Edit",
+                "startIcon": "edit",
+                "grow": 1
+              }
+            },
+
+            {
+              "id": "fri::uicomponent::button?id=clientcustombutton3",
+              "config": {
+                "title": "Add",
+                "startIcon": "add"
+              }
+            }
+          ]
+        },
+        "source": {
+          "type": 0,
+          "api": "/client/list"
+        },
+        "data": ""
+      },
+      {
+        "id": "fri::uicomponent::datagridcard?id=debtcard",
+        "config": {
+          "title": "Debts",
+          "mode": "view",
+          "entity": "fri::entity::Debts"
+        },
+        "init": {
+          "name": "DEBT_ID_SET"
+        },
+
+        "source": {
+          "type": 0,
+          "api": "/debt/list"
+        },
+        "data": ""
+      }
+    ],
+    "rightarea": [
+      {
+        "id": "fri::uicomponent::listItemcard?id=AppointmentsCard",
+        "config": {
+          "title": "Appointments",
+          "mode": "view",
+          "entity": "fri::entity::appointments"
+        },
+        "init": {
+          "name": "DEBT_ID_SET"
+        },
+        "toolbar": [
+          {
+            "id": "fri::uicomponent::button?id=AppointmentsAddButton",
+            "config": {
+              "title": "Add",
+              "starticon": "Plus"
+            }
+          }
+        ],
+        "source": {
+          "type": 0,
+          "api": "/appointments/list"
+        },
+        "data": ""
+      }
+    ]
+  }
+}

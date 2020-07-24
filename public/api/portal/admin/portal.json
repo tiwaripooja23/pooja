@@ -1,0 +1,18 @@
+{
+  "name": "admin",
+  "layout": ["fri::layout:default"],
+  "path": [
+    {
+      "url": "/details/:id",
+      "fri": "fri::page:details",
+      "params": ["id"],
+      "exact": false
+    },
+    {
+      "url": "/",
+      "fri": "fri::page:list",
+      "params": [],
+      "exact": false
+    }
+  ]
+}
